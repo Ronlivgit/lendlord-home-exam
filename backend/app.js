@@ -3,7 +3,7 @@ const runMode = process.env.RUN_MODE || 'app'
 global.APP_ENV = APP_ENV
 const config = require('./config/config').get(APP_ENV)
 global.config = config
-require('events').EventEmitter.defaultMaxListeners = 5
+require('events').EventEmitter.defaultMaxListeners = 10
 
 require('dotenv').config({ path: `./.env.${APP_ENV}` })
 const Koa = require('koa')
